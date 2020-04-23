@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<order_list>
+	<order id="1">
+		<user>user1</user>
+		<drink_list>
+			<drink>cappuccino</drink>
+			<drink>latte</drink>
+			<drink>espresso</drink>
+		</drink_list>
+		<price>30</price>
+	</order>
+	<order id="2">
+		<user>user2</user>
+		<drink_list>
+			<drink>cappuccino</drink>
+		</drink_list>
+		<price>10</price>
+	</order>
+	<order id="3">
+		<user>user3</user>
+		<drink_list>
+			<drink>espresso</drink>
+			<drink>latte</drink>
+		</drink_list>
+		<price>20</price>
+	</order>
+	<order id="4">
+		<user>user1</user>
+		<drink_list>
+			<drink>espresso</drink>
+			<drink>espresso</drink>
+			<drink>latte</drink>
+		</drink_list>
+		<price>30</price>
+	</order>
+</order_list>
