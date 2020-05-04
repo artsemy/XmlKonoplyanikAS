@@ -6,19 +6,14 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import by.training.epam.controller.ServletConstant;
 import by.training.epam.controller.command.Command;
 
 public class Home implements Command{
 
 	@Override
-	public void execute(HttpServletRequest request, HttpServletResponse response) {
-		try {
-			request.getRequestDispatcher("index.jsp").forward(request, response);
-		} catch (ServletException e) {
-			e.printStackTrace();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
+	public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		request.getRequestDispatcher(ServletConstant.HOME_PAGE).forward(request, response);
 	}
 
 }

@@ -16,7 +16,7 @@
               </xs:element>
               <xs:element type="xs:byte" name="price"/>
             </xs:sequence>
-            <xs:attribute type="xs:ID" name="id"/> <!-- ID-byte -->
+            <xs:attribute type="xs:byte" name="id"/> <!-- ID-byte -->
           </xs:complexType>
         </xs:element>
       </xs:sequence>

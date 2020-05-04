@@ -14,14 +14,13 @@ import by.training.epam.controller.command.CommandFactory;
 public class ServletJsp extends HttpServlet {
 	
 	private static final long serialVersionUID = 1L;
-	private static final String COMMAND = "command";
        
     public ServletJsp() {
         super();
     }
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String sCommand = request.getParameter(COMMAND);
+		String sCommand = request.getParameter(ServletConstant.COMMAND_ATTR);
 		CommandFactory factory = new CommandFactory();
 		Command command = factory.getCommand(sCommand);
 		command.execute(request, response);

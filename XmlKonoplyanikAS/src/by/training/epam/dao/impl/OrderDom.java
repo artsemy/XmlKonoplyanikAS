@@ -25,7 +25,7 @@ public class OrderDom implements OrderDAO {
 	private static final String PRICE_TAG = "price";
 	
 	@Override
-	public List<Order> readOrders() throws DAOException {
+	public List<Order> getOrders() throws DAOException {
 		List<Order> orders = new ArrayList<Order>();
 		try {
 			DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();

@@ -17,7 +17,7 @@ public class OrderSax implements OrderDAO {
 	private static final String XML_PATH = "resources/orders.xml";
 
 	@Override
-	public List<Order> readOrders() throws DAOException {
+	public List<Order> getOrders() throws DAOException {
 		List<Order> orders = null;
 		try {
 			XMLReader reader = XMLReaderFactory.createXMLReader();

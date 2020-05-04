@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import by.training.epam.bean.Order;
+import by.training.epam.controller.ServletConstant;
 import by.training.epam.controller.command.Command;
 import by.training.epam.service.OrderService;
 import by.training.epam.service.ServiceException;
@@ -21,10 +22,10 @@ public class doStax implements Command {
 			ServiceFactory factory = ServiceFactory.getInstance();
 			OrderService service = factory.getServiceStax();
 			List<Order> orders = service.parce();
-			request.setAttribute("array", orders);
-			request.getRequestDispatcher("table.jsp").forward(request, response);
+			request.setAttribute(ServletConstant.ARRAY_ATTR, orders);
+			request.getRequestDispatcher(ServletConstant.TABLE_PAGE).forward(request, response);
 		} catch (ServiceException e) {
-			request.getRequestDispatcher("error.jsp").forward(request, response);
+			request.getRequestDispatcher(ServletConstant.ERROR_PAGE).forward(request, response);
 		} 
 	}
 

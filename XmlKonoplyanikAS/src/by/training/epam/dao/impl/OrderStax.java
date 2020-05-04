@@ -18,7 +18,7 @@ public class OrderStax implements OrderDAO {
 	private static final String XML_PATH = "resources/orders.xml";
 
 	@Override
-	public List<Order> readOrders() throws DAOException {
+	public List<Order> getOrders() throws DAOException {
 		List<Order> orders;
 		try {
 			StringReader stringReader = new StringReader(XML_PATH);
